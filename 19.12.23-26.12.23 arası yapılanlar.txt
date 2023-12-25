@@ -1,0 +1,6 @@
+15 yeni Tarif eklendi. 
+projefotograf klasörüne 15 yeni tarifin görselleri yüklendi
+iletişim bölümünde yer alan form bölümü özelleştirildi(CSS ve JavaScript ile)
+Bu form bölümünde ad-soyad, e-posta ve mesaj kutusunun doldurulması zorunludur ve e-posta bölümünde geçerli bir e-posta girilmesi gerekir(@ işareti zorunludur!!).
+JavaScript ile form doldurulup gönderildikten sonra kullanıcıya bir geribildirim gönderildi.
+Diğer cihazlarda senkronizasyonu kontrol edildi.

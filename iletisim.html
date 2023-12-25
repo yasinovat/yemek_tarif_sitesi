@@ -1,36 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yemek Tarifim/İletişim</title>
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #F2F5F9;
+            margin: 0;/*sitenin sağ ve sol tarafındaki boşluğu sıfırladık*/
+            font-family: Arial, sans-serif;/*yazı tipini ayarladık*/
+            background-color: #F2F5F9;/*arkaplan rengini ayarladık*/
         }
         nav {
             background-color: #CC2E38;
-            padding: 10px;/*oge ve kenarların birbirinden uzaklıklarını ayarladık*/
-            text-align: center;/*yazıyı ortalar*/
+            padding: 10px;/*navbardaki çerçeveyi ayarladık*/
+            text-align: center;/*İletişim başlığını ortaladık*/
         }
         nav h1 {
             color: #F89526;
-            padding: 10px 20px;/*ilk pixel değeri altlı üstlü düzenlemeyi ikinci pixel değeri yatay düzenlemeyi sağladı*/            display: inline-block;/*ogelerin bir blok halinde sıralanmasına olanak tanır.*/
-            font-size: 1.25em;
+            padding: 10px 20px;/*iletişim yazısının alt/üst ve sağ/sol boşluklarını düzenledik*/
+            display: inline-block;/*bir blok halinde görünmesini sağladık*/
+            font-size: 1.5em;/*oransal font-size ayarladık*/
+            margin: 0; /* H1'in margin'ini sıfırlayarak düzeni düzelttik */
         }
-        h4
-        {
+        h4, p {
             text-align: center;
+            margin: 5px 0; /* H4 ve P etiketlerinin margin'ını düzenledik */
         }
-        p 
+        p {
+            letter-spacing: 1px;/*karakterler arasında 1 px lik bir boşluk ayarladık*/
+            font-style: italic;/*italik yazı biçimi*/
+            font-weight: 400;/*yazının kalınlığını ayarladık*/
+            font-size: 1em;
+            margin-bottom: 20px; /* P etiketinin alt boşluğunu arttırdık */
+        }
+        form {
+            max-width: 360px;/*max 360 px bir genişliğini olabileceğini sınırladık*/
+            width: 80%;/*ogenin genisliginin icerige uygun olmasını otomatik düzenler*/
+            margin: 0 auto; /* Formu sayfa ortasında hizalamak için kullanıldı */
+            background-color: #fff; /* Formun arka plan rengini beyaz yaptık */
+            padding: 20px;
+            border-radius: 8px;/*formda köşelerin biraz ovalleşmesini sağladık*/
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekledik */
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: calc(100% - 12px); /* Kenar boşluğu ekleyerek form elemanlarının genişliğini düzenledik */
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc; /* Hafif bir kenarlık ekledik */
+            border-radius: 4px;/*ad/soyad/eposta/mesaj bölgelelerinde kenarlarda ovallik sağladık*/
+            box-sizing: border-box; /* padding ve border'ı genişliğe dahil etmek için kullanıldı */
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;/*kenarlık eklemedik*/
+            cursor: pointer;/*gönder butonuna geldiğinde imleci el şeklinde değiştirdi*/
+            border-radius: 4px;/*gönder butonuna biraz ovallik ekledik*/
+        }
+        button:hover {
+            background-color: #45a049;/*butonun üstüne geldiğimizde rengin değişmesini sağladık*/
+        }
+        #ozelh4
         {
-            text-align: center;
-            letter-spacing: 1px;/*harfler arasındaki boşluğun boyutunu berlirler*/
-            font-style: italic;/*yazı tipi*/
-            font-weight: 400;/*yazını koyulaşmasını sağlar*/
-            font-size: 1em;/*yazının büyüklüğünü ayarlar*/
+            margin:20px;/*id si ozelh4 olan h4 ogesinin mesaj kutusuyla arasına mesafe koyduk */
         }
     </style>
 </head>
@@ -42,10 +79,11 @@
     <p>+90(531) 472 68 57</p>
     <h4>E-Posta:</h4>
     <p>yemektarifim@gmail.com</p>
-    <form id="feedbackForm" onsubmit="submitForm(event)">
-        <label for="firstName">Ad:</label>
-        <input type="text" id="firstName" name="firstName" required>
-
+    <h4 id="ozelh4">Dilek/Öneri/Şikayet:</h4>
+    <form id="feedbackForm" onsubmit="submitForm(event)"><!--form yapısı oluşturduk-->
+        <label for="firstName">Ad:</label><!--labeller input alanlarının açıklamalarını temsil eder-->
+        <input type="text" id="firstName" name="firstName" required><!--required input alanlarının boş bırakalamayacağını sağlar uyarı verir-->
+        <!--for özelliği label ile input arasındaki ilişkiyi kurar labeldaki for inputtaki id ile ilişkili-->
         <label for="lastName">Soyad:</label>
         <input type="text" id="lastName" name="lastName" required>
 
@@ -57,5 +95,26 @@
 
         <button type="submit">Gönder</button>
     </form>
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Formun normal gönderimini engelle
+
+            // Kullanıcıdan alınan bilgileri al
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            // Bilgilerin girilmesi ile ilgili doğrulama yaptık (boş olmamalı)
+            if (!firstName || !lastName || !email || !message) {
+                alert("Lütfen tüm alanları doldurun!");
+                return;
+            }
+
+            // alert ile geri bildirimimizi bastırdık
+            var resultMessage = "Mesajınız tarafımıza ulaştı en kısa sürede doldurduğunuz formda belirtilen "+ email + " e-posta adresiniz üzerinden iletişime geçilecektir" 
+            alert(resultMessage);
+        }
+    </script>
 </body>
 </html>
