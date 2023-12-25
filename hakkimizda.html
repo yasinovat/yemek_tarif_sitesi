@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yemek Tarifim/Hakkımızda</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #F2F5F9;
+    }
+    nav {
+        background-color: #CC2E38;
+        padding: 10px;/*oge ve kenarların birbirinden uzaklıklarını ayarladık*/
+        text-align: center;
+    }
+    nav h1 {
+        color: #F89526;
+        padding: 10px 20px;/*ilk pixel değeri altlı üstlü düzenlemeyi ikinci pixel değeri yatay düzenlemeyi sağladı*/            display: inline-block;/*ogelerin bir blok halinde sıralanmasına olanak tanır.*/
+        font-size: 1.25em;
+    }
+    #hakkimizda
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+    #hakkimizda img
+    {
+        max-width: 20%;/*ogenin maximum genişliğinin sayfada %20 kafar yer kaplayacağını belirtir*/
+        height: auto;/*genişliğe göre yüksekliğin otomatik ayarlanmasını sağlar*/
+        border-radius: 100%;/*ogenin oval bir hal almasını sağlar*/
+    }
+    #hakkimizda img .vesika2
+    {
+        width: 69.59px;
+        height: 69.59px;
+        border-radius: 100%;
+    }
+    #hakkimizda .name
+    {
+        text-align: center;
+    } 
+    #hakkimizda .name .opak
+    {
+        opacity: 0.6;/* ogeye opaklık katar*/
+    }
+    #hakkimizda .name .ozgecmis
+    {
+        text-align: center;
+        letter-spacing: 1px;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 1.15em;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Hakkımızda</h1>
+    </nav>
+    <div id="hakkimizda">
+        <img src="projefotograf/vesika1.jpg" alt="Ahmet Sungur">
+        <div class="name">
+            <h3>Ahmet Sungur</h3>
+            <p class="opak">Computer Engineer | Founder Of Yemek Tarifim</p>
+            <p class="ozgecmis">Ahmet Sungur, bilgisayar mühendisliği alanında uzmanlaşmış bir profesyoneldir. İstanbul Teknik Üniversitesi'nden yüksek lisans derecesiyle mezun olduktan sonra, bilgi teknolojileri sektöründe başarıyla çalışmıştır. Yemek Tarifim isimli projesi, Ahmet Sungur'un bilgi birikimini ve mühendislik yeteneklerini yemek dünyasıyla birleştiren yenilikçi bir girişimidir.Ahmet Sungur, Yemek Tarifim ile ev aşçılarının kendi mutfaklarında yaratıcılıklarını geliştirmelerini ve lezzetli deneyimler yaşamalarını sağlamaktadır. Kendisi, bilgisayar mühendisliği disiplini ve gastronomi tutkusu arasında benzersiz bir denge kurarak başarılı bir kariyere sahiptir ve Yemek Tarifim'in başarılı bir şekilde yönetilmesine liderlik etmektedir.</p>
+        <img src="projefotograf/vesika2.jpg" alt="Mehmet Oğuz" class="vesika2">
+        <div class="name">
+            <h3>Mehmet Oğuz</h3>
+            <p class="opak">Chef | Co-Founder Of Yemek Tarifim</p>
+            <p class="ozgecmis">Mehmet Oğuz, genç yaşta mutfak tutkusunu keşfeden ve üniversiteden yeni mezun olmuş bir aşçıdır. Yemek dünyasındaki kariyerine enerjisi ve öğrenmeye olan açlığıyla başlamış olan Oğuz, gastronomi alanındaki bilgisini ve becerilerini geliştirmek amacıyla çeşitli restoranlarda staj yapmıştır.Yemek Tarifim isimli yemek tarifi platformunu kurarken, Mehmet Oğuz'un öncelikli hedefi,deneyim kazanma yolundaki genç şeflere, öğrencilere ve ev aşçılarına ulaşarak onlara mutfakta güven kazandırmaktır. Yemek Tarifim, basit ve lezzetli tarifleriyle, kullanıcılarına adım adım mutfak becerilerini geliştirme fırsatı sunan bir kaynak olmayı amaçlamaktadır.</p>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>

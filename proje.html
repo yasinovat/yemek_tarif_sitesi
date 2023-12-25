@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yemek Tarifim</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",function(){
+            HosgeldinMesaji();
+        });//html belgesi tamamen yüklendiğinde HosgeldinMesajı çağrılır ve alert'in içinde yazılı ifade gözükür.
+        function HosgeldinMesaji()
+        {
+            alert("Yemek Tarifim Sitesine Hoş geldiniz!");
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;/*sitenin en üstündeki beyaz boşlukların silinmesini sağladı*/
+            font-family: Arial, sans-serif;
+            background-color: #F2F5F9;
+        }
+
+        nav {
+            background-color: #CC2E38;
+            padding: 10px;/*oge ve kenarların birbirinden uzaklıklarını ayarladık*/
+            text-align: center;/*yazının merkeze gelmesini sağlar*/
+        }
+
+        nav a {
+            color: #F89526;
+            text-decoration: none;/*link verdiğimizde altı çizili olmasını engellemiş olduk*/
+            padding: 10px 20px;/*ilk pixel değeri altlı üstlü düzenlemeyi ikinci pixel değeri yatay düzenlemeyi sağladı*/
+            display: inline-block;/*ogelerin bir blok halinde sıralanmasına olanak tanır.*/
+            font-size: 1.15em;/*kelimelerin büyüklüğünü ayarladık*/
+        } 
+
+        nav a:hover {
+            background-color: #F89526;
+            color: #CC2E38;
+            border-radius: 4px;/*linklerin üstüne geldiğimizde köşelerin ovalleşmesini sağladı*/
+        }
+        nav h1
+        {
+            color: #F89526;
+        }
+        .anasayfa-image
+        {
+            display: flex;/*ogelerin birbirine göre hizalanmasında kullandık */
+            border: 5px solid black;
+            object-fit: cover;/*görüntünün en uygun şekilde olmasını sağlar*/
+            margin: 4% auto ;/*alt ve üst marjları ogenin genişliğinin %4 ü kadarı şeklinde, sağ ve sol marjların da otomatik ayarlanmasını sağladı*/
+        }
+        .anasayfa-aciklama
+        {
+            text-align: center;
+            letter-spacing: 1px;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 1.15em;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-design">
+        <h1>Yemek Tarifim</h1>
+        <a href="proje.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="tarifler.html">Tarifler</a>
+        <a href="iletisim.html">İletişim</a>
+    </nav>
+    
+        <img src="/projefotograf/image1.jpg" class="anasayfa-image">
+        <div class="anasayfa-aciklama">
+            <p>Bu yemek sitesinin kuruluş amacı, kullanıcılara geniş bir yemek kültürü yelpazesi sunarak onlara lezzetli ve çeşitli yemek tariflerine kolay erişim sağlamaktır. Yemek sitemiz, ev aşçılarına ve yemek meraklılarına çeşitli kategorilerde tariflere ulaşma imkanı sunarak mutfak deneyimlerini zenginleştirmeyi amaçlamaktadır. Sitenin hedefi, kullanıcıların damak zevkine uygun tarifleri keşfetmelerine olanak tanımak ve farklı tariflerden ilham alarak kendi yemekleri üzerinde yaratıcılıklarını geliştirmelerine yardımcı olmaktır.</p>
+        </div>
+
+</body>
+</html>
