@@ -1,0 +1,3 @@
+Ana sayfada ortalanmış olan resimdeki görüntülenme sıkıntı giderildi debug yapılmış oldu
+Ana sayfada kullanışlılığı azaltan javascript kodu kaldırıldı
+iletişim kısmında HTML formları eklendi.Ad soyad, eposta ve mesaj bölümü eklenmiş oldu. 
